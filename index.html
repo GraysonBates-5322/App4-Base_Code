@@ -82,6 +82,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
+
+<div class="page" id="one"> <!-- Creates the first full-page section -->
+	<div id="header" class="w3-container w3-flat-carrot"> <!-- Defines the page header with W3.CSS styling and color -->
+		<h1>Question 1</h1> <!-- Provides words to Question 1 -->
+	</div>
+	
+    	<div id="content" class="w3-container"> <!-- Creates the main content area with W3.CSS formatting -->
+        <p>Are your eyes watery or itchy?</p> <!-- Provides the first question -->   
+    	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-green"> YES</a> <!-- Defines button with green and Yes, once clicked added to allergy count goes to next page -->
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-red">NO</a> <!-- Defines button with red and No, once clicked added to cold count to go to next page -->
+	 </div><!-- /content -->
+
+</div>
 	
 </body>
 </html>
