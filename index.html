@@ -37,8 +37,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
+        // Stores the number of allergy-related symptoms selected
+		var allergy_count = 0;
+        // Stores the number of cold-related symptoms selected
+		var cold_count = 0;
 
-	//YOUR JAVASCRIPT GOES HERE
+		// Increases the allergy symptom counter by 1
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+        }
+		
+		// Increases the cold symptom counter by 1
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        } 
+		
+		// Displays the calculated probability results on the webpage, Calculates the percentage likelihood of allergies vs. cold based on the number of symptoms selected (out of 4 total questions)
+		function showResults(){ 
+			var resultText = document.getElementById("results");
+			let allergyPercent = (allergy_count/4) * 100;
+			let coldPercent = (cold_count/4) * 100;
+			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%"; 
+		}
+
 
 </script>	
 
