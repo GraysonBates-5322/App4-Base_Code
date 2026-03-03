@@ -37,27 +37,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </head> 
 
 <script>
-        // Stores the number of allergy-related symptoms selected
-		var allergy_count = 0;
-        // Stores the number of cold-related symptoms selected
-		var cold_count = 0;
+        // Stores the number of strep-related symptoms selected
+		var strep_count = 0;
+        // Stores the number of mono-related symptoms selected
+		var mono_count = 0;
 
-		// Increases the allergy symptom counter by 1
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
+		// Increases the strep symptom counter by 1
+        function strepAdd(){
+            strep_count = strep_count + 1;
         }
 		
-		// Increases the cold symptom counter by 1
-        function coldAdd(){
-            cold_count = cold_count + 1;
+		// Increases the mono symptom counter by 1
+        function monoAdd(){
+            mono_count = mono_count + 1;
         } 
 		
-		// Displays the calculated probability results on the webpage, Calculates the percentage likelihood of allergies vs. cold based on the number of symptoms selected (out of 4 total questions)
+		// Displays the calculated probability results on the webpage, Calculates the percentage likelihood of strep vs. mono based on the number of symptoms selected (out of 4 total questions)
 		function showResults(){ 
 			var resultText = document.getElementById("results");
-			let allergyPercent = (allergy_count/4) * 100;
-			let coldPercent = (cold_count/4) * 100;
-			resultText.innerHTML = "Probability it is allergies = " + allergyPercent + "%" + "<br> Probability it is a cold = " + coldPercent + "%"; 
+			let strepPercent = (strep_count/4) * 100;
+			let monoPercent = (mono_count/4) * 100;
+			resultText.innerHTML = "Probability it is Strep = " + strepPercent + "%" + "<br> Probability it is a Mononucleosis = " + monoPercent + "%"; 
 		}
 
 
